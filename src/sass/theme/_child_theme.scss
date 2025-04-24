@@ -1,0 +1,143 @@
+// Green Resort SCSS - Bootstrap override + thème custom
+// Dossier : /scss/_theme-greenresort.scss
+
+//utilitaires bootstrap
+/*
+.no-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+@media (max-width: 767.98px) {
+  .no-padding-mobile {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+*/
+
+//Fonts
+@font-face {
+  font-family: 'Quicksand Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Quicksand Light'), url('../src/fonts/Quicksand/Quicksand%5Bwght%5D.woff') format('woff');
+  }
+  
+
+  @font-face {
+    font-family: 'Quicksand Bold Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Quicksand Bold Regular'), url('../src/fonts/Quicksand/Quicksand_Bold.woff') format('woff');
+    }
+
+p.n1{font-size:18px;}
+p.n2{font-size:16px;color:$vert_clair}
+  
+
+// Couleurs principales inspirées du site Framer
+$primary: #2A7B62;
+$secondary: #ADC9B7;
+$light: #F2F5F0;
+$dark: #1D1D1D;
+
+
+// Typographie
+
+$font-family-base: 'Quicksand Light', Helvetica, Arial, sans-serif;
+$headings-font-family: 'Georgia', serif;
+
+
+
+// Custom classes
+body {
+  background-color: $light;
+  color: $dark;
+  font-family: $font-family-base;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $headings-font-family;
+  color: #000;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+
+  &:hover {
+    background-color: darken($primary, 5%);
+    border-color: darken($primary, 5%);
+  }
+}
+
+.section-title {
+  border-bottom: 2px solid $primary;
+  padding-bottom: .5rem;
+  margin-bottom: 2rem;
+}
+
+//hero image
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  //height: calc(95vh - 80px);
+  overflow: hidden;
+}
+
+.hero-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  //background: rgba(0, 0, 0, 0.4); /* fond semi-transparent */
+  //border-radius: 1rem;
+}
+
+.hero-banner h1{color:#fff}
+
+//home page
+.home .hero-text {
+  top:30%
+}
+.tripadvisor{
+position:absolute;
+right:3rem;
+bottom:13rem;
+width:60px;
+height:75px;
+background-color: #fff;
+}
+.home .hero-banner {
+  height: 100vh;  
+}
+.home-col3-icones {
+  text-align:center;
+  background-color: $fond;
+  border-top-right-radius: 150px;
+  border-top-left-radius: 150px;
+  padding:7rem 0 2rem;
+  position:relative;
+  margin-top:-7.5rem;
+}
+.home-col3-icones img{margin-bottom:1.5rem}
+/* Version desktop (par exemple à partir de 768px) */
+@media (min-width: 768px) {
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+  .hero-text p {
+    font-size: 1.25rem;
+  }
+}
